@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        app:layout_constraintBottom_toTopOf="@id/tvValueDistance"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/tvValueDistance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_default_value_distance"
+        app:layout_constraintBottom_toTopOf="@id/tvDistance"
+        app:layout_constraintEnd_toEndOf="@id/tvDistance"
+        app:layout_constraintStart_toStartOf="@id/tvDistance" />
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/txt_distance"
+        app:layout_constraintBottom_toTopOf="@id/ivRecord"
+        app:layout_constraintEnd_toStartOf="@id/tvAverageSpeed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvValueSeep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_default_value_speed"
+        app:layout_constraintBottom_toTopOf="@id/tvAverageSpeed"
+        app:layout_constraintEnd_toEndOf="@id/tvAverageSpeed"
+        app:layout_constraintStart_toStartOf="@id/tvAverageSpeed" />
+
+    <TextView
+        android:id="@+id/tvAverageSpeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_speed"
+        app:layout_constraintBottom_toBottomOf="@id/tvDistance"
+        app:layout_constraintEnd_toStartOf="@id/tvTime"
+        app:layout_constraintStart_toEndOf="@id/tvDistance"
+        app:layout_constraintTop_toTopOf="@id/tvDistance" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/txt_default_value_time"
+        app:layout_constraintBottom_toBottomOf="@id/tvValueSeep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvAverageSpeed"
+        app:layout_constraintTop_toTopOf="@id/tvDistance" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRecord"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideLineCenter"
+        app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+        app:srcCompat="@drawable/ic_record" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivResume"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideLineCenter"
+        app:srcCompat="@drawable/ic_resume" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPause"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideLineCenter"
+        app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+        app:srcCompat="@drawable/ic_pause" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivStop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideLineCenter"
+        app:srcCompat="@drawable/ic_stop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+apply from: '../android-library.gradle'
+
+dependencies {
+
+    implementation project(':domain')
+    implementation project(':location')
+
+    // Lifecycle
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.java8
+    kapt deps.lifecycle.compiler
+
+    // RxJava & RxAndroid
+    implementation deps.reactive.rxjava
+    implementation deps.reactive.rx_android
+    implementation deps.reactive.rxRelay
+
+    implementation deps.kotlin.stdlib
+    implementation deps.kotlin.ktx
+
+    // Koin
+    implementation deps.koin.core
+    implementation deps.koin.scope
+    implementation deps.koin.android
+    implementation deps.koin.viewmodel
+
+    implementation deps.timberkt
+
+    testImplementation deps.kotlin.koin_test
+    testImplementation deps.kotlin.mockito_kotlin
+    testImplementation deps.arch_core.testing
+}

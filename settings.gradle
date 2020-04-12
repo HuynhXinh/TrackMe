@@ -1,0 +1,13 @@
+rootProject.name='TrackMe'
+include ':app',
+        ':data',
+        ':domain',
+        ':presentation',
+
+        ':share',
+
+        ':location',
+        ':permission'
+
+project(':location').projectDir = new File('device/location')
+project(':permission').projectDir = new File('device/permission')

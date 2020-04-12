@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TrackMe</string>
+    <string name="txt_default_value_distance">-- km</string>
+    <string name="txt_distance">Distance</string>
+    <string name="txt_default_value_speed">-- km/h</string>
+    <string name="txt_speed">Speed</string>
+    <string name="txt_default_value_time">00:00:00</string>
+    <string name="txt_avg_speed">Avg. Speed</string>
+</resources>
